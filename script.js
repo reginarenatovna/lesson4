@@ -69,12 +69,12 @@ var appData = {
 		appData.income.push(prompt('Может что-то ещё?'));
 		appData.income = items.split(',');
 		appData.income.sort();
-					// while ((items == "" || items == null ) && typeof(items) !== 'string') {
-					// 	items = prompt('Что принесет дополнтельный доход? (Перечислите через запятую)');
-					// 	appData.income.push(prompt('Может что-то ещё?'));
-					// }
-					// appData.income = items.split(',');
-					// appData.income.sort();
+					while ((items == "" || items == null ) && typeof(items) !== 'string') {
+						items = prompt('Что принесет дополнтельный доход? (Перечислите через запятую)');
+						appData.income.push(prompt('Может что-то ещё?'));
+					}
+					appData.income = items.split(',');
+					appData.income.sort();
 				}
 };
 appData.chooseIncome();
